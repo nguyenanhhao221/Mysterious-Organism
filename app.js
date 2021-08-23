@@ -67,6 +67,28 @@ const pAequorFactory = (number,array) => {
                 return false;
             }
         },
+
+        //function to create a complementary DNA Strand
+        complementStrand() {
+            let compDNA = []
+            for (let item of this.dna) {
+                switch (item) {
+                    case 'A':
+                        compDNA.push('T');
+                        break;
+                    case 'T':
+                        compDNA.push('A');
+                        break;
+                    case 'C':
+                        compDNA.push('G');
+                        break;
+                    case 'G':
+                        compDNA.push('C');
+                        break;
+                }
+            }
+            return compDNA;
+        },
     }
 };
 
@@ -81,3 +103,6 @@ while(finalArr.length < 30) {
 }
 console.log(finalArr);
 
+const firstDNA = pAequorFactory(1,mockUpStrand());
+console.log(firstDNA.dna);
+console.log(firstDNA.complementStrand());
