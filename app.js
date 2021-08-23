@@ -106,3 +106,5 @@ console.log(finalArr);
 const firstDNA = pAequorFactory(1,mockUpStrand());
 console.log(firstDNA.dna);
 console.log(firstDNA.complementStrand());
+
+//Test git
